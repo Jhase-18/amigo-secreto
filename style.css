@@ -125,6 +125,12 @@ button {
     background-color: #a1a1a1;
 }
 
+.button-draw img {
+    width: 24px; /* Ajusta el tamaño según tus necesidades */
+    height: 24px; /* Ajusta el tamaño según tus necesidades */
+    margin-right: 5px; /* Ajusta el margen según tus necesidades */
+}
+
 /* Listas */
 ul {
     list-style-type: none;

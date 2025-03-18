@@ -20,7 +20,7 @@
         <section class="input-section">
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre" onkeydown="if(event.key === 'Enter') agregarAmigo()" oninput="validarEntrada()">
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
            
@@ -29,13 +29,20 @@
 
             <div class="button-container">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear" class="icon">
                     Sortear amigo
+                </button>
+                <br>
+                <button id="resetButton" class="button-draw" onclick="reiniciarSorteo()" aria-label="Reiniciar sorteo" style="display: none;">
+                    <img src="assets/icons8-reiniciar-48.png" alt="Ícono para reiniciar" class="icon">
+                    Reiniciar sorteo
                 </button>
             </div>
         </section>
     </main>
 
+    <!-- Enlace al archivo JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="app.js" defer></script>
 </body>
 </html>
